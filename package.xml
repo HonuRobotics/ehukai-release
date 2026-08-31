@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>ehukai</name>
+  <version>0.0.3</version>
+  <description>
+    Headless spectral ocean-wave synthesis library: TMA/JONSWAP/Pierson-Moskowitz
+    spectra with directional spreading and dispersion, after Horvath (2015).
+    Exports the ehukai::ehukai CMake target.
+
+    This manifest exists so the library can be developed as a peer of its
+    consumers in a colcon workspace. It is a plain CMake package — colcon does
+    not change how it is configured, built or installed, and it is not a ROS
+    package in any other sense. The Debian packaging (cmake/Packaging.cmake) and
+    a standalone cmake build are unaffected.
+  </description>
+  <maintainer email="info@honurobotics.com">Honu Robotics</maintainer>
+  <author>Christopher Jon Horvath</author>
+  <license file="LICENSE">Apache-2.0</license>
+  <url type="repository">https://github.com/HonuRobotics/ehukai</url>
+  <url type="bugtracker">https://github.com/HonuRobotics/ehukai/issues</url>
+
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <depend>eigen</depend>
+  <depend>libimath-dev</depend>
+  <depend>tbb</depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
